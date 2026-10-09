@@ -28,7 +28,11 @@ app.post('/vacancies', (req, res) =>{
 });
 
 //Enciende el servidor
-app.listen(PORT, () =>{
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
-});
+if(require.main === module){
+    app.listen(PORT, () =>{
+        console.log(`Servidor escuchando en http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
 
