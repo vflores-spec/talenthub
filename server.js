@@ -18,7 +18,7 @@ app.get('/vacancies', (req, res) => {
 app.post('/vacancies', (req, res) =>{
     const {title, company, mode, salary} = req.body;
     if(!title || !company){
-        return res.status(400).json({erro: 'Título y empresa son obligatorios'});
+        return res.status(400).json({error: 'Título y empresa son obligatorios'});
     }
 
     //Nuevo objeto para le arreglo
